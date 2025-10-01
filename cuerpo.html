@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La Cevichería</title>
+  <link rel="stylesheet" href="estiloscevicheria.css" />
+</head>
+<body>
+
+  <!-- CÍRCULOS NEÓN -->
+  <div class="neon-background">
+    <div class="neon-circle" style="top: 10%; left: 20%;"></div>
+    <div class="neon-circle" style="top: 30%; left: 70%;"></div>
+    <div class="neon-circle" style="top: 60%; left: 40%;"></div>
+    <div class="neon-circle" style="top: 80%; left: 80%;"></div>
+    <div class="neon-circle" style="top: 50%; left: 10%;"></div>
+  </div>
+
+  <!-- VIDEO DE FONDO -->
+  <div class="video-hero">
+    <video autoplay muted loop playsinline>
+      <source src="La Cevichería Antiguo Cuscatlán 2025.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <img src="logo.png" alt="La Cevichería">
+      <h1>¡Sabor del mar en cada bocado!</h1>
+    </div>
+  </div>
+
+  <!-- SECCIONES -->
+  <section id="menu">
+    <h2>Platillos Estrella</h2>
+    <ul class="platillos">
+      <li>🐟 Ceviche mixto</li>
+      <li>🦐 Camarones empanizados</li>
+      <li>🦑 Calamares a la plancha</li>
+    </ul>
+  </section>
+
+  <section class="galeria" id="galeria">
+    <h2>Galería</h2>
+    <img src="platillo1.jpg" alt="Ceviche Mixto">
+    <img src="platillo2.jpg" alt="Camarones Empanizados">
+  </section>
+
+  <section id="ubicacion">
+    <h2>Nuestras Sucursales</h2>
+    <div class="sucursal">
+      <h3>Soyapango</h3>
+      <a class="btn-mapa" href="https://maps.app.goo.gl/49jRFZhLJn9re2A1A?g_st=iw" target="_blank">Ver en mapa</a>
+    </div>
+    <div class="sucursal">
+      <h3>Antiguo Cuscatlán</h3>
+      <a class="btn-mapa" href="https://maps.app.goo.gl/SPcHnvMxecVNwa47A?g_st=iw" target="_blank">Ver en mapa</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>📱 Síguenos en <a href="https://www.instagram.com/lacevicheriaes?igsh=NnB4cjVzMzF4NnFi" target="_blank">Instagram</a></p>
+    <p>© 2025 La Cevichería</p>
+  </footer>
+
+  <!-- BOTÓN BURBUJA -->
+  <div class="bubble-menu">
+    <button class="bubble-button" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <!-- CONTENIDO DEL MENÚ -->
+  <div class="menu-content" id="menuContent">
+    <ul>
+      <li><a href="#menu">Menú</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menuContent').classList.toggle('open');
+    }
+  </script>
+<script>
+  const platos = {
+    carrusel1: [
+      { img: 'ceviche.jpg', titulo: '🦐 Ceviche de camarón', texto: 'Fresco, marinado con limón y cilantro.' },
+      { img: 'tostadas.jpg', titulo: '🥙 Tostadas mixtas', texto: 'Tostadas con ceviche rosado y rojo.' },
+      { img: 'conchas.jpg', titulo: '🧄 Conchas gratinadas al ajo', texto: 'Media docena con ajo y queso mozzarella.' }
+    ],
+    carrusel2: [
+      { img: 'super-frito.jpg', titulo: '🍤 Super Frito', texto: 'Crujiente surtido de mariscos empanizados.' },
+      { img: 'queso-fundido.jpg', titulo: '🧀 Queso fundido', texto: 'Con chorizo, camarón o jalapeño.' },
+      { img: 'guacamole.jpg', titulo: '🥑 Guacamole con chicharrón', texto: 'Perfecto para comenzar la experiencia.' }
+    ],
+    carrusel3: [
+      { img: 'filete.jpg', titulo: '🐟 Filete empanizado', texto: 'Con arroz, ensalada y limón.' },
+      { img: 'tostones.jpg', titulo: '🍌 Tostones mixtos', texto: 'Con ceviche rosado, camarón y pescado.' },
+      { img: 'cuajada.jpg', titulo: '🧀 Cuajada con aguacate', texto: 'Clásico tradicional con tortilla.' }
+    ]
+  };
+
+  function rotarCarrusel(id, items) {
+    let index = 0;
+    const contenedor = document.getElementById(id);
+    const img = contenedor.querySelector('img');
+    const titulo = contenedor.querySelector('h3');
+    const texto = contenedor.querySelector('p');
+
+    setInterval(() => {
+      index = (index + 1) % items.length;
+      img.src = items[index].img;
+      img.alt = items[index].titulo;
+      titulo.textContent = items[index].titulo;
+      texto.textContent = items[index].texto;
+    }, 4000);
+  }
+
+  rotarCarrusel('carrusel1', platos.carrusel1);
+  rotarCarrusel('carrusel2', platos.carrusel2);
+  rotarCarrusel('carrusel3', platos.carrusel3);
+</script>
+
+
+</body>
+</html>

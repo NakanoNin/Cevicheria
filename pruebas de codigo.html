@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Cevichería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estiloscevicheria.css" />
+</head>
+<body>
+
+  <!-- Video de fondo con efecto scroll -->
+  <div class="video-hero" id="videoHero">
+    <video autoplay muted loop playsinline>
+      <source src="La Cevichería Antiguo Cuscatlán 2025.mp4.mp4" type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
+    <div class="hero-content">
+      <img src="2.png" alt="Logo de La Cevichería" />
+      <h1>La Cevichería</h1>
+      <h3>Mar y Tierra Fusión</h3>
+    </div>
+  </div>
+
+  <!-- MENÚ BURBUJA DESPLEGABLE -->
+  <div class="bubble-menu">
+    <button id="toggleMenu" class="bubble-button">☰</button>
+    <div class="menu-content" id="menuContent">
+      <ul>
+        <li><a href="#videoHero">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="bubble-animation"></div>
+    </div>
+  </div>
+
+ <!-- PLATILLOS DESTACADOS -->
+<section id="menu" class="fondo-platos">
+  <div class="overlay">
+    <h2>Algunos de nuestros platillos</h2>
+
+    <div class="carruseles">
+      <!-- CARRUSEL 1 -->
+      <div class="platillo-carrusel" id="carrusel1">
+        <div class="imagen-container">
+          <img src="coctel.jpg" alt="Platillo 1" />
+        </div>
+        <div class="platillo-texto">
+          <h3>Coctel en Salsa Rosada</h3>
+          <p>Coctel de camarón con tomate, cebolla y cilantro bañado en salsa rosada.</p>
+        </div>
+        <div class="botones-carrusel">
+          <button onclick="anteriorCarrusel('carrusel1')">◀</button>
+          <button onclick="siguienteCarrusel('carrusel1')">▶</button>
+        </div>
+      </div>
+
+      <!-- CARRUSEL 2 -->
+      <div class="platillo-carrusel" id="carrusel2">
+        <div class="imagen-container">
+          <img src="carne.jpg" alt="Platillo 2" />
+        </div>
+        <div class="platillo-texto">
+          <h3>Super Frito</h3>
+          <p>Texto</p>
+        </div>
+        <div class="botones-carrusel">
+          <button onclick="anteriorCarrusel('carrusel2')">◀</button>
+          <button onclick="siguienteCarrusel('carrusel2')">▶</button>
+        </div>
+      </div>
+
+      <!-- CARRUSEL 3 -->
+      <div class="platillo-carrusel" id="carrusel3">
+        <div class="imagen-container">
+          <img src="mariscada.jpg" alt="Platillo 3" />
+        </div>
+        <div class="platillo-texto">
+          <h3>Nombre</h3>
+          <p>Texto</p>
+        </div>
+        <div class="botones-carrusel">
+          <button onclick="anteriorCarrusel('carrusel3')">◀</button>
+          <button onclick="siguienteCarrusel('carrusel3')">▶</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECCIÓN DE PROMOCIONES -->
+<section id="promociones">
+  <!-- Fondo animado marino -->
+  <div class="marino-fondo"></div>
+
+
+  <!-- Burbujas flotantes -->
+  <div class="burbujas">
+    <div class="burbuja burbuja1"></div>
+    <div class="burbuja burbuja2"></div>
+    <div class="burbuja burbuja3"></div>
+    <div class="burbuja burbuja4"></div>
+    <div class="burbuja burbuja5"></div>
+    <div class="burbuja burbuja6"></div>
+    <div class="burbuja burbuja7"></div>
+    <div class="burbuja burbuja8"></div>
+  </div>
+
+ 
+
+  <!-- Corales decorativos -->
+  <div class="corales"></div>
+  <div class="corales derecha"></div>
+  <div class="corales extra"></div>
+  
+
+  <!-- Título -->
+  <h2>Promociones</h2>
+
+  <!-- Carrusel de promociones -->
+  <div id="contenedor-promos" class="carrusel-promos">
+    <div class="promo-item"><img src="lonja.jpg" alt="Promo 1" /></div>
+    <div class="promo-item"><img src="platano.jpg" autoplay muted loop></img></div>
+    <div class="promo-item"><img src="mariscada.jpg" alt="Promo 3" /></div>
+  </div>
+</section>
+
+ <!-- NOSOTROS -->
+  <section id="nosotros" class="fondo-platos-1">
+    <h2>¿Quiénes somos?</h2>
+    <p>La Cevichería nace con la pasión por la cocina marina y el sabor salvadoreño...</p>
+  </section>
+  
+
+  <!-- UBICACIÓN -->
+  <section id="ubicacion">
+    <h2>Visítanos</h2>
+    
+    <div class="sucursal">
+      <h3>Sucursal Soyapango</h3>
+      <p>📍 Centro Comercial (especificar nombre)</p>
+      <a class="btn-mapa" href="https://maps.app.goo.gl/49jRFZhLJn9re2A1A?g_st=iw" target="_blank" rel="noopener noreferrer">📍   ubicacion</a>
+    </div>
+
+    <div class="sucursal">
+      <h3>Sucursal Antiguo Cuscatlán (UCA)</h3>
+      <p>📍 Venecia - Antiguo Cuscatlán</p>
+
+      <div class="botones-accion">
+        <a class="btn-mapa" href="https://maps.app.goo.gl/SPcHnvMxecVNwa47A?g_st=iw" target="_blank" rel="noopener noreferrer">
+          📍 Ubucacion
+        </a>
+        <a class="btn-menu" href="LC ANTIGUO CUSCATLÁN.pdf" target="_blank" rel="noopener noreferrer">
+          Ver Menú
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- SECCIÓN DE POSTULACIONES -->
+
+<section id="postulaciones" class="fondo-platos-1">
+  <h2>¡Únete a nuestro equipo!</h2>
+
+  <!-- Formulario centrado -->
+  <div id="formularioWrapper">
+    <form id="formularioReal" class="formulario-postulacion">
+      <input type="text" name="nombre" placeholder="Nombre y apellido" required />
+      <input type="tel" name="telefono" placeholder="Teléfono" required />
+      <input type="text" name="puesto" placeholder="Puesto al que aplica" required />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <!-- Mensaje de éxito -->
+  <p id="mensajeFinal" class="mensaje-exito oculto">✅ ¡Postulación enviada!</p>
+</section>
+
+
+
+  <!-- CONTACTO -->
+  <footer id="contacto">
+    <h2>Contáctanos</h2>
+    <p>📱 <a href="https://www.instagram.com/lacevicheriaes" target="_blank" rel="noopener noreferrer">@lacevicheriaes</a></p>
+    <p>📞 WhatsApp: +503 7000 0000</p>
+    <p>📧 Correo: contacto@lacevicheria.com</p>
+    <p>&copy; 2025 La Cevichería</p>
+  </footer>
+
+  <!-- Script para desplazar video y mostrar menú -->
+<script>
+  const videoHero = document.getElementById('videoHero');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const limit = window.innerHeight;
+    const translateY = Math.min(scrollY, limit);
+    videoHero.style.transform = `translateY(-${translateY}px)`;
+  });
+
+  const toggleMenu = document.getElementById("toggleMenu");
+  const menuContent = document.getElementById("menuContent");
+
+  toggleMenu.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menuContent.classList.toggle("open");
+  });
+
+  document.addEventListener("click", () => {
+    if (menuContent.classList.contains("open")) {
+      menuContent.classList.remove("open");
+    }
+  });
+
+  menuContent.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+</script>
+
+<!-- Script para carrusel de platillos destacados -->
+<!-- Script para platillos tipo burbuja -->
+<script>
+  const platos = {
+    carrusel1: [
+      { img: 'coctel.jpg', titulo: 'Coctel en Salsa Rosada', texto: 'Coctel de camaron con tomate, cebolla y cilantro bañado en salsa rosada.' },
+      { img: 'lonja.jpg', titulo: 'Lonja de Pescado', texto: 'Lonja a la plancha con acompañamientos frescos.' },
+      { img: 'pinchos.jpg', titulo: 'Pinchos Mixtos', texto: '3 pinchos de camaron, lomo y tocino con pan y chimichurri.' }
+    ],
+    carrusel2: [
+      { img: 'carne.jpg', titulo: 'Corte de Carne', texto: 'Carne jugosa a la parrilla con ensalada fresca.' },
+      { img: 'pizza.jpg', titulo: 'Pizza Artesanal', texto: 'Pizza con ingredientes frescos y masa crujiente.' },
+      { img: 'plato.jpg', titulo: 'Plato Mixto', texto: 'Mezcla de mariscos y carnes a la plancha.' }
+    ],
+    carrusel3: [
+      { img: 'mariscada.jpg', titulo: 'Mariscada', texto: 'Selección de mariscos en caldo tradicional.' },
+      { img: 'platano.jpg', titulo: 'Platano Frito', texto: 'Delicioso platano maduro frito con crema y frijoles.' },
+      { img: 'chicharron.jpg', titulo: 'Chicharrón', texto: 'Chicharrón crujiente acompañado de salsa.' }
+    ]
+  };
+
+  const indices = { carrusel1: 0, carrusel2: 0, carrusel3: 0 };
+  const ids = ['platillo1', 'platillo2', 'platillo3'];
+
+  function actualizarPlatillos() {
+    ids.forEach((id, index) => {
+      const carruselId = `carrusel${index+1}`;
+      const datos = platos[carruselId][indices[carruselId]];
+
+      // Actualizamos los contenidos
+      document.getElementById(`img${index+1}`).src = datos.img;
+      document.getElementById(`img${index+1}`).alt = datos.titulo;
+      document.getElementById(`titulo${index+1}`).textContent = datos.titulo;
+      document.getElementById(`texto${index+1}`).textContent = datos.texto;
+
+      // Avanzamos el índice automáticamente
+      indices[carruselId] = (indices[carruselId] + 1) % platos[carruselId].length;
+    });
+  }
+
+  // Ejecutar una vez al cargar
+  actualizarPlatillos();
+
+  // Cambiar automáticamente cada 5 segundos
+  setInterval(actualizarPlatillos, 5000);
+</script>
+
+
+<!-- Script para mostrar mensaje final al enviar formulario -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("formularioReal");
+    const mensaje = document.getElementById("mensajeFinal");
+
+    if (form && mensaje) {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        form.style.display = "none";
+        mensaje.classList.add("mostrar-mensaje");
+      });
+    }
+  });
+</script>
+
+<!-- Otros scripts que tengas -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("formularioReal");
+    const mensaje = document.getElementById("mensajeFinal");
+
+    if (form && mensaje) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        form.classList.add("ocultar"); // aplica animación CSS
+        setTimeout(() => {
+          form.style.display = "none";
+          mensaje.classList.add("mostrar-mensaje");
+        }, 600); // espera a que termine la animación
+      });
+    }
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+</body>
+
+
+</body>
+</html>
+
